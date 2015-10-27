@@ -26,7 +26,7 @@ module.exports = function(options){
 				result += chalk[color](part.value);
 			});
 
-			return callback(new gutil.PluginError('gulp-tssfmt', '\n' + result));
+			return callback(new gutil.PluginError('gulp-tssfmt', file.path + '\n' + result));
 		}
 
 		callback();
